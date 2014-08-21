@@ -7,6 +7,7 @@ class MY_Controller extends CI_Controller {
 		parent::__construct();
 		// $this->load->database();
 		$this->load->library('session');
+		$this->load->library('PHPExcel');
 		$this->load->library('pagination');
 		$this->cismarty->assign('baseUrl','/'.basename(FCPATH));
 	}
