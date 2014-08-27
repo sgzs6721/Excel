@@ -42,7 +42,6 @@ class Member extends MY_Controller{
 		
 		$this->load->model('members');
 
-		#TODO Use Ajax dynamic verify name and passwd
 		if ($this->members->verify_member($this->input->post()))
 		{
 			$this->session->set_userdata('memberName',$this->input->post('username'));

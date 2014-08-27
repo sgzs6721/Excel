@@ -1,8 +1,10 @@
-<?php echo $member_name; ?>已登录<br><br><br>
+<?php echo $member_name; ?>Signed In<br><br><br>
 
-<a href="<?php echo site_url('member/add');?>">添加用户</a><br><br>
-<a href="<?php echo site_url('member/list_members');?>">查看所有用户</a><br><br><br>
+<a href="<?php echo site_url('member/add');?>">Add New Member</a><br><br>
+<a href="<?php echo site_url('member/list_members');?>">Reveiw All Members</a><br><br><br>
 
-<a href="<?php echo site_url('upload');?>">上传Report</a><br><br>
 
-<a href="<?php echo site_url('member/logout');?>">登出</a><br><br>
+<a href="<?php echo site_url('manager');?>">Add New Test</a><br><br>
+<a href="<?php echo site_url('upload');?>">Upload Report</a><br><br>
+
+<a href="<?php echo site_url('member/logout');?>">Logout</a><br><br>

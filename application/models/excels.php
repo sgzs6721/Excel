@@ -1,31 +1,11 @@
 <?php
 
 
-class Excel extends MY_Controller {
+class Excels extends CI_Model {
 
     function __construct()
     {
         parent::__construct();
-    }
-
-    function index()
-    {
-    	$filePath = "uploads/WebUI_V2_Testcases.xls";
-
-		$PHPExcel = new PHPExcel();
-		$PHPReader = new PHPExcel_Reader_Excel5();
-
-		$PHPExcel = $PHPReader->load($filePath);
-        $sheetNames  = $PHPReader->listWorksheetNames($filePath);
-
-        var_dump($sheetNames);
-
-
-		// $objWriter = PHPExcel_IOFactory::createWriter($PHPExcel, 'Excel2007');
-		// $objWriter->save('uploads/test.xlsx');
-
-
-		echo 'test';
     }
 
     function test()
@@ -47,6 +27,12 @@ class Excel extends MY_Controller {
         $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
 
         $objWriter->save('uploads/test.xls');
+    }
+
+    function get_report_result()
+    {
+        $objPHPExcel = PHPExcel_IOFactory::load("uploads/WebUI_V2_Testcases.xls","Excel5");
+
     }
 }
 

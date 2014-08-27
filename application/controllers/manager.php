@@ -12,5 +12,9 @@ class Manager extends MY_Controller {
         $this->cismarty->view('add_test.tpl');
     }
 
-    
+    function add_product()
+    {
+
+    }
+
 }
