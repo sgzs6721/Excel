@@ -32,9 +32,11 @@ class Upload extends MY_Controller {
             $this->load->model('excels');
             $upload_data = $this->upload->data();
             $report_result = $this->excels->get_report_result($config['upload_path'], $upload_data['file_name']);
+            // var_dump($report_result);
             $data = array('upload_data' => $upload_data, 'test_result' => $report_result);
 
-            $this->load->view('upload_success', $data);
+            $this->cismarty->view('pages/summary_report.tpl', $data);
+
         }
     }
 }

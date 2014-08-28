@@ -14,7 +14,7 @@ class Manager extends MY_Controller {
 
     function add_product()
     {
-
+        
     }
 
 }
