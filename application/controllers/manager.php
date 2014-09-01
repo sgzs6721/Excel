@@ -9,7 +9,7 @@ class Manager extends MY_Controller {
      
     function index()
     { 
-        $this->cismarty->view('add_test.tpl');
+        $this->cismarty->view('pages/test_add.tpl');
     }
 
     function add_product()
